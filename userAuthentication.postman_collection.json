@@ -1,0 +1,883 @@
+{
+	"info": {
+		"_postman_id": "b707399a-dcfb-432d-a2e8-e966bf0dd36b",
+		"name": "userAuthentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30762698"
+	},
+	"item": [
+		{
+			"name": "registerUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjhjMjdhNzQ5MmEzYzc4YmMyYzQxYWQzOTE4ODU3MmUwZjlhZjc1MWM5N2FiYzE1Mzg1ZTVjYWFlNzgxMDg5MjQ5ZDBlYTcxZmU5YzllYTkiLCJpYXQiOjE2OTY3NTY5NDIuMzUwODg5LCJuYmYiOjE2OTY3NTY5NDIuMzUwODkxLCJleHAiOjE3MjgzNzkzNDIuMzQ1MzIsInN1YiI6IjUiLCJzY29wZXMiOltdfQ.Mqx4czWT23N1yeQrNFNR_z8ElTwGn9at2HiaJrDFxadkLvp-B1ILBH78BuztznO3MqZRKH6wqy_uB8Pk2DPhsDNpY5hxthebRrpVctuTStKH2ka3--YF8d4rD7FluqbEJEnN7luxnRJIdqSEE9SWTlX9noIAKAldBm6ro41jVmHv5SqIo7wzc-2YqTvB8OW8BMO7LCHvL71RvbcX8VLJBmnvKDo4eOCE_hhKU_BAeTmqVz3aNblCQr3XbREqF5Sy0DLIeNDwt9epH8_febpJ-j6LN9botd76uGfSjKcjOkSQrdqdjm_NARmk3CLEcgchXF0gN4iNhVicxxtZOKdX_DymDiofr5BW5UjSv4zoQ7b2tFEou1n_fbB-i29oLaiu68eNU9h-o-kejKf-70zFd8ehxKZ2V7sFPYFztM571DPn3Qa2pfPSXBXsLytIjiHrA8jyeHcsgsUY3t2P9wPObS14p3NiFFAkEdUE0DowqyKli_wLRJBYrFEPL5LHP3WZMqFqM232Wuaqz8txO0NgP1Frhl4cFdCWgOn4Pwph6E-kj2yocrgyo-4K7EXIXI_ECBF-rNJDf8u9lvVqJzAOz21pmbz91sdl96bNF4a7QUv9dA2siJoHoaSZl02kK_nI3g8ahpvOSm3-Dq6mFQH7rNA5f2vI5uYtn6nLLeMyv_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Bob Kasembeli",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "bob1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Password@101",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "Password@101",
+							"type": "text"
+						},
+						{
+							"key": "role_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0748665935",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "bob1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://kasedevs.co.ke/laravel-api-crud-passport/api/register",
+					"protocol": "https",
+					"host": [
+						"kasedevs",
+						"co",
+						"ke"
+					],
+					"path": [
+						"laravel-api-crud-passport",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createRole",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYThjNmM3MjRlYzgyMjg0NjUzZDlmMGNkY2M5MjUxMTZhM2ZiNWZlM2MxMDJjMGJhMTEwYWJlZjUwOGNkYzdkZWM5YmY0ZGZhZjllOGU5YjgiLCJpYXQiOjE3MDMwMTk4NjAuNjQ5NjUyLCJuYmYiOjE3MDMwMTk4NjAuNjQ5NjU2LCJleHAiOjE3MzQ2NDIyNjAuNTg2NTgsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.pOi9scWX-7mQq_jv1QXJmRxAx8_UYDQBVcprwJrtVK9eWJBYGydzNtwwXo-mVl38g5nAIQ5OxlwiQwgkoK3IBqU402agPzP9m6Ztag-kVE_a_5YUGJrin4rkN9igk23B0vT_kojjP1sW73JPzAeru11P82dWvbYjcRYnAIP60AALSKhPqTs9PWVnk06XGav5UdIT6jogHLFfaslVsI6JT_QYXRYoF77ZcCPLas-aNR1J8vzEwTbhncdbDNkrx65JYDv7LKoHv5-9lM5Xx3T1aDNyVvXURs4mnSeuO_dD-GZa0NpB-zaDwKW4jKq-BXhBlCAbEyE1jyLPSCDkK3k23BXy5SdHd8ErVgNh8vJe0D3Kl5UaM0zLLPvcjoO1zYieNS8KAvBRiFYHsAsq4MLpw9DAdkp9KOFK0XbnS4W5skMaF5yIMt1m34MquIh4zDs7YbAKB_n-feGRVevSfG_glPEiXWIcprJyegjhFW-dvPL6RK9QqlTgsWkXaLAdWM0SfnsMpxXVUnrPatjkxiINKFVBgV_MsJwCvINT0u26aF6XTcPLoBV6BwEBCm0Q6WhSrnI-NiHQvDAVqqhhlKWlNJQMg9CzxkpS2mSCeM1annGKZ587t6CJGtWkNnVHtfwcu2qv7Lz7Ni6v2W1KIS2H8yYEwPaFri7jTmYfFuOY2vE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "role_name",
+							"value": "Producer",
+							"type": "text"
+						},
+						{
+							"key": "permissions[]",
+							"value": "createBeats",
+							"type": "text"
+						},
+						{
+							"key": "permissions[]",
+							"value": "viewAllBeats",
+							"type": "text"
+						},
+						{
+							"key": "permissions[]",
+							"value": "updateBeats",
+							"type": "text"
+						},
+						{
+							"key": "permissions[]",
+							"value": "deleteBeats",
+							"type": "text"
+						},
+						{
+							"key": "permissions[]",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/roles",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewAllRoles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYzZkNzgyNGM2YjIzNGMxY2U2MjU3ODM3YzNlNTBlZGYxNTM1OGZlMDJlMWY0NGQzNWM0MWI0YzI2NTI0MWYxYmIxMjVjNTc5ZDNjZmE5Y2UiLCJpYXQiOjE2OTk1NTUwNDcuMTUwMTg1LCJuYmYiOjE2OTk1NTUwNDcuMTUwMTg4LCJleHAiOjE3MzExNzc0NDcuMTQ4MDA5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.eKzW0G1WHye7NfNGE_ZSpXF8WiN8YqLqkOjSsBbDUnRYECasZh3Ebdgn4UFQ1BJgqblik-D8StqjPNai4eJJ7B0cygXx7qJdcjSdzTWLLi_6DySqahOWerHxdARJrHsNXp9lw1m5NVmRvwUR0iMID70VQNzEKfX74eKMLNOd45wClqxmjJsJl5XICqIIHEibFi2mOBoqhKWQ4c8IGVBMfVp9PewFEj14606ieNwSdezMy-U5RcNu1yjzV3tsffd9K8HV7kOEzqryt-5hLOAF9ccHOFSoeknlfngLq_x9ukIeKDxw8mT6mXmo31iJ7BCi6cZsL3h_h7txsvMI_ooHBfKjFaaAkD-ZvosnBtM1O-igAeZTMJ4BdS0NMrEY4LOTrMjHl3ulhODxmdtrqkyQdMfRZnqoY90x53JIPlBrF7mftwKfl7_CmNnD6Okeq8_c_Y2cjA1I-cmIoiJRQSsntadQdC26J4OfJ8OOU4ZvpRsnhMlqGp7ro6plG49AYB2vqlUR-CLwlwGg5IjpF2gaFHuRB399IhAKE4cHQMex8kR1Cgy1G7sdc4AYQZI2h1G35DR8MqsuXkjVM2BR60_QwD9ixTJejdhYqDQjQaaWKW4u0eBFwrqvwLTVNBREHNRj6_8L-5EcIzJagIEE_ISkbm8cLY4wXOHu3ks4wrRSHm4\"\n}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://kasedevs.co.ke/laravel-api-crud-passport/api/roles",
+					"protocol": "https",
+					"host": [
+						"kasedevs",
+						"co",
+						"ke"
+					],
+					"path": [
+						"laravel-api-crud-passport",
+						"api",
+						"roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewSingleRole",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDdlY2RiZWE2OTIyNWRkNzMzZGVhYWViZjk3M2EzMzE4ZjI1NTNkZWE3ZDY1ZWVlNzVkMDg0ZTI5NTJkNWExODMzMGY1ZTg1OTdiYmQ1NTYiLCJpYXQiOjE2OTgyMzM2MzIuMTA0MDg5LCJuYmYiOjE2OTgyMzM2MzIuMTA0MDkxLCJleHAiOjE3Mjk4NTYwMzIuMTAyNjE2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TrQfKuqCA_8awQX0fOLR6hyW7nQv_QG3uvUgpPJpbbkZ7UIf2EsN6p8k0mYOaCeEzNPlSCL0O9bTq9cehjIxyE-Be_tUw0BAXMk8_2BoEBWm8vq_abuwjrO2bej9hQcSFV4NtsRltuRVWzftX-hiz0pnGT3vfZVca3gC4NgeuFvz7LWu5XS3MRjK-k-L9J_WPO9_-sTtLHXgHci4UGvcFQi7pNTGTixpYmRoS07Eb9KGLpgYAJqLvOkhqmiRUuGiUocTI3a9KBIEMFJmSx2oQyWFbJ7ChliAEHjm1wcDYNYtqILQBA4qc3zeKQzqHYUl4mMKFfX6Mz4Jtr9bzxkyG0_Cpo42CWSLR52xx2a9lr8M0V505nCYJbUvTCNVWdw40wDB3-_GufyBQwX_yvnUrqcH3NBQckeRvTfpi-1p3YswV3030AfkUJBRkWqdlUsopqphZrEpUTEnbMnco4RiYguNQezJnQ3ijB0u2njZ-PNcSHxmhrlpZL_dikXad3U9inxbs4sb8394qVSjx3tuC_5v9tmkioPws5r43EXcUAbepexgZ9Ejm-Awx95y6sVvvvJcAQV2v3xN-AvmwfbEmVb1ZO8Lz0ajXEc2uuoan1njpgCJwyiQvtE1mpkgPBlSWZ3TYADPnUzXM1aiG33lYxUo0hHh37gYi0Y-TLNdq6c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://kasedevs.co.ke/laravel-api-crud-passport/api/roles/2",
+					"protocol": "https",
+					"host": [
+						"kasedevs",
+						"co",
+						"ke"
+					],
+					"path": [
+						"laravel-api-crud-passport",
+						"api",
+						"roles",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateRole",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDdlY2RiZWE2OTIyNWRkNzMzZGVhYWViZjk3M2EzMzE4ZjI1NTNkZWE3ZDY1ZWVlNzVkMDg0ZTI5NTJkNWExODMzMGY1ZTg1OTdiYmQ1NTYiLCJpYXQiOjE2OTgyMzM2MzIuMTA0MDg5LCJuYmYiOjE2OTgyMzM2MzIuMTA0MDkxLCJleHAiOjE3Mjk4NTYwMzIuMTAyNjE2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TrQfKuqCA_8awQX0fOLR6hyW7nQv_QG3uvUgpPJpbbkZ7UIf2EsN6p8k0mYOaCeEzNPlSCL0O9bTq9cehjIxyE-Be_tUw0BAXMk8_2BoEBWm8vq_abuwjrO2bej9hQcSFV4NtsRltuRVWzftX-hiz0pnGT3vfZVca3gC4NgeuFvz7LWu5XS3MRjK-k-L9J_WPO9_-sTtLHXgHci4UGvcFQi7pNTGTixpYmRoS07Eb9KGLpgYAJqLvOkhqmiRUuGiUocTI3a9KBIEMFJmSx2oQyWFbJ7ChliAEHjm1wcDYNYtqILQBA4qc3zeKQzqHYUl4mMKFfX6Mz4Jtr9bzxkyG0_Cpo42CWSLR52xx2a9lr8M0V505nCYJbUvTCNVWdw40wDB3-_GufyBQwX_yvnUrqcH3NBQckeRvTfpi-1p3YswV3030AfkUJBRkWqdlUsopqphZrEpUTEnbMnco4RiYguNQezJnQ3ijB0u2njZ-PNcSHxmhrlpZL_dikXad3U9inxbs4sb8394qVSjx3tuC_5v9tmkioPws5r43EXcUAbepexgZ9Ejm-Awx95y6sVvvvJcAQV2v3xN-AvmwfbEmVb1ZO8Lz0ajXEc2uuoan1njpgCJwyiQvtE1mpkgPBlSWZ3TYADPnUzXM1aiG33lYxUo0hHh37gYi0Y-TLNdq6c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "role_name",
+							"value": "Super_Admin",
+							"type": "text"
+						},
+						{
+							"key": "permissions[]",
+							"value": "createUser",
+							"type": "text"
+						},
+						{
+							"key": "permissions[]",
+							"value": "updateUser",
+							"type": "text"
+						},
+						{
+							"key": "permissions[]",
+							"value": "viewUser",
+							"type": "text"
+						},
+						{
+							"key": "permissions[]",
+							"value": "deleteUser",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/roles/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"roles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteRole",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDdlY2RiZWE2OTIyNWRkNzMzZGVhYWViZjk3M2EzMzE4ZjI1NTNkZWE3ZDY1ZWVlNzVkMDg0ZTI5NTJkNWExODMzMGY1ZTg1OTdiYmQ1NTYiLCJpYXQiOjE2OTgyMzM2MzIuMTA0MDg5LCJuYmYiOjE2OTgyMzM2MzIuMTA0MDkxLCJleHAiOjE3Mjk4NTYwMzIuMTAyNjE2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TrQfKuqCA_8awQX0fOLR6hyW7nQv_QG3uvUgpPJpbbkZ7UIf2EsN6p8k0mYOaCeEzNPlSCL0O9bTq9cehjIxyE-Be_tUw0BAXMk8_2BoEBWm8vq_abuwjrO2bej9hQcSFV4NtsRltuRVWzftX-hiz0pnGT3vfZVca3gC4NgeuFvz7LWu5XS3MRjK-k-L9J_WPO9_-sTtLHXgHci4UGvcFQi7pNTGTixpYmRoS07Eb9KGLpgYAJqLvOkhqmiRUuGiUocTI3a9KBIEMFJmSx2oQyWFbJ7ChliAEHjm1wcDYNYtqILQBA4qc3zeKQzqHYUl4mMKFfX6Mz4Jtr9bzxkyG0_Cpo42CWSLR52xx2a9lr8M0V505nCYJbUvTCNVWdw40wDB3-_GufyBQwX_yvnUrqcH3NBQckeRvTfpi-1p3YswV3030AfkUJBRkWqdlUsopqphZrEpUTEnbMnco4RiYguNQezJnQ3ijB0u2njZ-PNcSHxmhrlpZL_dikXad3U9inxbs4sb8394qVSjx3tuC_5v9tmkioPws5r43EXcUAbepexgZ9Ejm-Awx95y6sVvvvJcAQV2v3xN-AvmwfbEmVb1ZO8Lz0ajXEc2uuoan1njpgCJwyiQvtE1mpkgPBlSWZ3TYADPnUzXM1aiG33lYxUo0hHh37gYi0Y-TLNdq6c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/roles/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"roles",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logoutUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDdlY2RiZWE2OTIyNWRkNzMzZGVhYWViZjk3M2EzMzE4ZjI1NTNkZWE3ZDY1ZWVlNzVkMDg0ZTI5NTJkNWExODMzMGY1ZTg1OTdiYmQ1NTYiLCJpYXQiOjE2OTgyMzM2MzIuMTA0MDg5LCJuYmYiOjE2OTgyMzM2MzIuMTA0MDkxLCJleHAiOjE3Mjk4NTYwMzIuMTAyNjE2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TrQfKuqCA_8awQX0fOLR6hyW7nQv_QG3uvUgpPJpbbkZ7UIf2EsN6p8k0mYOaCeEzNPlSCL0O9bTq9cehjIxyE-Be_tUw0BAXMk8_2BoEBWm8vq_abuwjrO2bej9hQcSFV4NtsRltuRVWzftX-hiz0pnGT3vfZVca3gC4NgeuFvz7LWu5XS3MRjK-k-L9J_WPO9_-sTtLHXgHci4UGvcFQi7pNTGTixpYmRoS07Eb9KGLpgYAJqLvOkhqmiRUuGiUocTI3a9KBIEMFJmSx2oQyWFbJ7ChliAEHjm1wcDYNYtqILQBA4qc3zeKQzqHYUl4mMKFfX6Mz4Jtr9bzxkyG0_Cpo42CWSLR52xx2a9lr8M0V505nCYJbUvTCNVWdw40wDB3-_GufyBQwX_yvnUrqcH3NBQckeRvTfpi-1p3YswV3030AfkUJBRkWqdlUsopqphZrEpUTEnbMnco4RiYguNQezJnQ3ijB0u2njZ-PNcSHxmhrlpZL_dikXad3U9inxbs4sb8394qVSjx3tuC_5v9tmkioPws5r43EXcUAbepexgZ9Ejm-Awx95y6sVvvvJcAQV2v3xN-AvmwfbEmVb1ZO8Lz0ajXEc2uuoan1njpgCJwyiQvtE1mpkgPBlSWZ3TYADPnUzXM1aiG33lYxUo0hHh37gYi0Y-TLNdq6c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDdlY2RiZWE2OTIyNWRkNzMzZGVhYWViZjk3M2EzMzE4ZjI1NTNkZWE3ZDY1ZWVlNzVkMDg0ZTI5NTJkNWExODMzMGY1ZTg1OTdiYmQ1NTYiLCJpYXQiOjE2OTgyMzM2MzIuMTA0MDg5LCJuYmYiOjE2OTgyMzM2MzIuMTA0MDkxLCJleHAiOjE3Mjk4NTYwMzIuMTAyNjE2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TrQfKuqCA_8awQX0fOLR6hyW7nQv_QG3uvUgpPJpbbkZ7UIf2EsN6p8k0mYOaCeEzNPlSCL0O9bTq9cehjIxyE-Be_tUw0BAXMk8_2BoEBWm8vq_abuwjrO2bej9hQcSFV4NtsRltuRVWzftX-hiz0pnGT3vfZVca3gC4NgeuFvz7LWu5XS3MRjK-k-L9J_WPO9_-sTtLHXgHci4UGvcFQi7pNTGTixpYmRoS07Eb9KGLpgYAJqLvOkhqmiRUuGiUocTI3a9KBIEMFJmSx2oQyWFbJ7ChliAEHjm1wcDYNYtqILQBA4qc3zeKQzqHYUl4mMKFfX6Mz4Jtr9bzxkyG0_Cpo42CWSLR52xx2a9lr8M0V505nCYJbUvTCNVWdw40wDB3-_GufyBQwX_yvnUrqcH3NBQckeRvTfpi-1p3YswV3030AfkUJBRkWqdlUsopqphZrEpUTEnbMnco4RiYguNQezJnQ3ijB0u2njZ-PNcSHxmhrlpZL_dikXad3U9inxbs4sb8394qVSjx3tuC_5v9tmkioPws5r43EXcUAbepexgZ9Ejm-Awx95y6sVvvvJcAQV2v3xN-AvmwfbEmVb1ZO8Lz0ajXEc2uuoan1njpgCJwyiQvtE1mpkgPBlSWZ3TYADPnUzXM1aiG33lYxUo0hHh37gYi0Y-TLNdq6c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "wisdom",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/editusers/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"editusers",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewAllUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDdlY2RiZWE2OTIyNWRkNzMzZGVhYWViZjk3M2EzMzE4ZjI1NTNkZWE3ZDY1ZWVlNzVkMDg0ZTI5NTJkNWExODMzMGY1ZTg1OTdiYmQ1NTYiLCJpYXQiOjE2OTgyMzM2MzIuMTA0MDg5LCJuYmYiOjE2OTgyMzM2MzIuMTA0MDkxLCJleHAiOjE3Mjk4NTYwMzIuMTAyNjE2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TrQfKuqCA_8awQX0fOLR6hyW7nQv_QG3uvUgpPJpbbkZ7UIf2EsN6p8k0mYOaCeEzNPlSCL0O9bTq9cehjIxyE-Be_tUw0BAXMk8_2BoEBWm8vq_abuwjrO2bej9hQcSFV4NtsRltuRVWzftX-hiz0pnGT3vfZVca3gC4NgeuFvz7LWu5XS3MRjK-k-L9J_WPO9_-sTtLHXgHci4UGvcFQi7pNTGTixpYmRoS07Eb9KGLpgYAJqLvOkhqmiRUuGiUocTI3a9KBIEMFJmSx2oQyWFbJ7ChliAEHjm1wcDYNYtqILQBA4qc3zeKQzqHYUl4mMKFfX6Mz4Jtr9bzxkyG0_Cpo42CWSLR52xx2a9lr8M0V505nCYJbUvTCNVWdw40wDB3-_GufyBQwX_yvnUrqcH3NBQckeRvTfpi-1p3YswV3030AfkUJBRkWqdlUsopqphZrEpUTEnbMnco4RiYguNQezJnQ3ijB0u2njZ-PNcSHxmhrlpZL_dikXad3U9inxbs4sb8394qVSjx3tuC_5v9tmkioPws5r43EXcUAbepexgZ9Ejm-Awx95y6sVvvvJcAQV2v3xN-AvmwfbEmVb1ZO8Lz0ajXEc2uuoan1njpgCJwyiQvtE1mpkgPBlSWZ3TYADPnUzXM1aiG33lYxUo0hHh37gYi0Y-TLNdq6c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/viewusers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"viewusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewSingleUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDdlY2RiZWE2OTIyNWRkNzMzZGVhYWViZjk3M2EzMzE4ZjI1NTNkZWE3ZDY1ZWVlNzVkMDg0ZTI5NTJkNWExODMzMGY1ZTg1OTdiYmQ1NTYiLCJpYXQiOjE2OTgyMzM2MzIuMTA0MDg5LCJuYmYiOjE2OTgyMzM2MzIuMTA0MDkxLCJleHAiOjE3Mjk4NTYwMzIuMTAyNjE2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TrQfKuqCA_8awQX0fOLR6hyW7nQv_QG3uvUgpPJpbbkZ7UIf2EsN6p8k0mYOaCeEzNPlSCL0O9bTq9cehjIxyE-Be_tUw0BAXMk8_2BoEBWm8vq_abuwjrO2bej9hQcSFV4NtsRltuRVWzftX-hiz0pnGT3vfZVca3gC4NgeuFvz7LWu5XS3MRjK-k-L9J_WPO9_-sTtLHXgHci4UGvcFQi7pNTGTixpYmRoS07Eb9KGLpgYAJqLvOkhqmiRUuGiUocTI3a9KBIEMFJmSx2oQyWFbJ7ChliAEHjm1wcDYNYtqILQBA4qc3zeKQzqHYUl4mMKFfX6Mz4Jtr9bzxkyG0_Cpo42CWSLR52xx2a9lr8M0V505nCYJbUvTCNVWdw40wDB3-_GufyBQwX_yvnUrqcH3NBQckeRvTfpi-1p3YswV3030AfkUJBRkWqdlUsopqphZrEpUTEnbMnco4RiYguNQezJnQ3ijB0u2njZ-PNcSHxmhrlpZL_dikXad3U9inxbs4sb8394qVSjx3tuC_5v9tmkioPws5r43EXcUAbepexgZ9Ejm-Awx95y6sVvvvJcAQV2v3xN-AvmwfbEmVb1ZO8Lz0ajXEc2uuoan1njpgCJwyiQvtE1mpkgPBlSWZ3TYADPnUzXM1aiG33lYxUo0hHh37gYi0Y-TLNdq6c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/singleuser/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"singleuser",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDdlY2RiZWE2OTIyNWRkNzMzZGVhYWViZjk3M2EzMzE4ZjI1NTNkZWE3ZDY1ZWVlNzVkMDg0ZTI5NTJkNWExODMzMGY1ZTg1OTdiYmQ1NTYiLCJpYXQiOjE2OTgyMzM2MzIuMTA0MDg5LCJuYmYiOjE2OTgyMzM2MzIuMTA0MDkxLCJleHAiOjE3Mjk4NTYwMzIuMTAyNjE2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TrQfKuqCA_8awQX0fOLR6hyW7nQv_QG3uvUgpPJpbbkZ7UIf2EsN6p8k0mYOaCeEzNPlSCL0O9bTq9cehjIxyE-Be_tUw0BAXMk8_2BoEBWm8vq_abuwjrO2bej9hQcSFV4NtsRltuRVWzftX-hiz0pnGT3vfZVca3gC4NgeuFvz7LWu5XS3MRjK-k-L9J_WPO9_-sTtLHXgHci4UGvcFQi7pNTGTixpYmRoS07Eb9KGLpgYAJqLvOkhqmiRUuGiUocTI3a9KBIEMFJmSx2oQyWFbJ7ChliAEHjm1wcDYNYtqILQBA4qc3zeKQzqHYUl4mMKFfX6Mz4Jtr9bzxkyG0_Cpo42CWSLR52xx2a9lr8M0V505nCYJbUvTCNVWdw40wDB3-_GufyBQwX_yvnUrqcH3NBQckeRvTfpi-1p3YswV3030AfkUJBRkWqdlUsopqphZrEpUTEnbMnco4RiYguNQezJnQ3ijB0u2njZ-PNcSHxmhrlpZL_dikXad3U9inxbs4sb8394qVSjx3tuC_5v9tmkioPws5r43EXcUAbepexgZ9Ejm-Awx95y6sVvvvJcAQV2v3xN-AvmwfbEmVb1ZO8Lz0ajXEc2uuoan1njpgCJwyiQvtE1mpkgPBlSWZ3TYADPnUzXM1aiG33lYxUo0hHh37gYi0Y-TLNdq6c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/deleteusers/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"deleteusers",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "beatUpload",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjY1NTZlMTgzNWYxNjQzY2RmZGVmZGY5NzkxMmEyZWJkYWI3NGQzZDljYjMxMzQzMjE4ZWE4NDk2ZjAwYmUyZmZmYzU4MWFkZjE2NWQ5YmIiLCJpYXQiOjE2OTgyNjU4MTQuMjE4MDMxLCJuYmYiOjE2OTgyNjU4MTQuMjE4MDM1LCJleHAiOjE3Mjk4ODgyMTQuMjEzNTIzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.HRRqhnYsve-3Pf-Cb-bo-YAaJ7kIwSvTMZ552iCMV9JCT6KU5P8UkOeKLiYL5lECmOhYgOOB252_m9nqC-AUAuUW28imqkuOy4cOFhzepIb3htSI_84b5Bp4twxc-7ayfR2j5j_J4EsTmgYHgk8MsGo6WPNTvytMalIAp2rGayxXsr2dzk07q9Eo_TnZRdSNme_yMtv3FIlBHRXcRKst2ePH7I6vVIyAuA3avj6ZkWObS5DXqIcAXq0u7CJNlaLlQeS_ALUZK-OcnPDFmh2fZyrJGLTWAyhC3PoFLCSpabRI71KnMTvGQ1aJunLst4pm1aJWEQZku-MHArBf8LNEgzNNgiaBH8mXvkqQKaUp2ziypo_wYeoi1kPBclvfrdBBktIZZPgFRaYQwv4uJkAuPOOLtPpmhXzEaOomd8xqdR4WkLBEPNlffF89UCuU3FI1t9P94bIjSnXcXPrdLJPU5Vy9XvClETEh_RUtPV6xC3NO0RoFrf580GL2IXXs6t2X-lsXu-gieBo6JV1RamnM9USkdTLsun2FcuMtjsqepwEP5Glrjz5Urx7j56pKTaixC4a0e0l-ExmycPJZz9_vdANoh79pcN0e4h7NkbpRnhlkpEXlC4hNztKy6JjjPNukU_PeOUJ8ADEyKnLNVR0QeZ-7UdSsaSxKQZZRBQeVAug",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "beat_title",
+							"value": "My Beat 9",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Awsome beat 3",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "200",
+							"type": "text"
+						},
+						{
+							"key": "beat_file",
+							"type": "file",
+							"src": "/C:/Users/rober/Downloads/Shallipopi - Obapluto (Official Video) feat. Pa Monday-Edo.mp3"
+						},
+						{
+							"key": "cover_image",
+							"type": "file",
+							"src": "/C:/Users/rober/Downloads/pexels-nikita-korchagin-11491151.jpg"
+						},
+						{
+							"key": "genre",
+							"value": "HipHop",
+							"type": "text"
+						},
+						{
+							"key": "mood",
+							"value": "Energetic",
+							"type": "text"
+						},
+						{
+							"key": "bpm",
+							"value": "120",
+							"type": "text"
+						},
+						{
+							"key": "key",
+							"value": "C",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "music,beats",
+							"type": "text"
+						},
+						{
+							"key": "license_type",
+							"value": "Standard",
+							"type": "text"
+						},
+						{
+							"key": "license_details",
+							"value": "For personal use only",
+							"type": "text"
+						},
+						{
+							"key": "short_preview",
+							"type": "file",
+							"src": "/C:/Users/rober/Downloads/Shallipopi - Obapluto (Official Video) feat. Pa Monday-Edo.mp3"
+						},
+						{
+							"key": "high_quality_file",
+							"type": "file",
+							"src": "/C:/Users/rober/OneDrive/Desktop/My Audio.wav"
+						},
+						{
+							"key": "collaborators",
+							"value": "Artist1,Artist2",
+							"type": "text"
+						},
+						{
+							"key": "instruments_used",
+							"value": "Drums,Keyboards",
+							"type": "text"
+						},
+						{
+							"key": "duration",
+							"value": "180",
+							"type": "text"
+						},
+						{
+							"key": "visibility",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "allow_downloads",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "allow_comments",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "release_date",
+							"value": "2023-10-23",
+							"type": "text"
+						},
+						{
+							"key": "story_background",
+							"value": "This is my awesome beat.",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://kasedevs.co.ke/laravel-api-crud-passport/api/beats",
+					"protocol": "https",
+					"host": [
+						"kasedevs",
+						"co",
+						"ke"
+					],
+					"path": [
+						"laravel-api-crud-passport",
+						"api",
+						"beats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewAllBeats",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDYxZjBkYjZkOGRkMjM0YmQyMjVjNWRmMjkwNDY4ZjY3ODYxMGRjODBmMmJjYmZiNWM2OTk0MDk2NDYxOTM0MjMxNWYzZTE3NDI1YmE4ODciLCJpYXQiOjE2OTgyMzY3MTAuNDI4MzU5MDMxNjc3MjQ2MDkzNzUsIm5iZiI6MTY5ODIzNjcxMC40MjgzNjQ5OTIxNDE3MjM2MzI4MTI1LCJleHAiOjE3Mjk4NTkxMTAuNDAwMTEwOTYwMDA2NzEzODY3MTg3NSwic3ViIjoiMSIsInNjb3BlcyI6W119.dAYwKbX9M5ScQ2ucLKbvrws2QbktLF7sSlFFkRm25vHRS49yevrydESiaABullySmbq5Nx1z-pWbLbje-ZWMRgA7Mjfh2JUSEa-zNyuusssBk_AW_712xVid6W1ZqCTtBb3AlBf5g3_5mhVEukpIOg8nHoKMM1DEBGe_I6sQ-PsnV8-w8Op5n3CcxPVEQjT200vbDvu4jS7Ii3XwBqicwlPdRWR0KANOnNt60rxcWxXHJkHiG0hWhrR6AR4-wXmQP2SfyBbIY6-7mHjJGlnXOSQhGdlWVdszoEXPdbIWqOIpmmd6Mq-KLDQsDrMrPt-HXyOovYSGg9tduhlwfnvvP-dOYRvVmp23LP22VFA_s6ghliQ7ls1dGetQ2jPsffZkCNVbNYjKT0B4RiyCl9wK4Xp6Vu1MW9glLdKyaKiep_unZSACYr0JM0xkYNEPg4UVPG8vIuUb3gh9JtMEjPdQnVEf9jnxzDUpEBPmiNzg-u9Yhev-EbBuTwo_Pb6om8Aov_LPLXReUPF_g-aHO60rNgLyAK_gHtrU9wwRftI_0OkOddT__UhqxHE0RLmUuBneZgjrL02olDo1BbUPQSv2c-XbzKt6TxylqnVJSmIUfY1k4v_AP4mpxHYQAAQo9McTOfQLQDlsmbAcEVj4JZBB4qqCndtR54DFpu_LKLUlq9M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GETHTTPS://WISDOM.MYSTICSTYLES.AFRICA",
+				"header": [],
+				"url": {
+					"raw": "https://wisdom.mysticstyles.africa/api/beats",
+					"protocol": "https",
+					"host": [
+						"wisdom",
+						"mysticstyles",
+						"africa"
+					],
+					"path": [
+						"api",
+						"beats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewSingleBeat",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDdlY2RiZWE2OTIyNWRkNzMzZGVhYWViZjk3M2EzMzE4ZjI1NTNkZWE3ZDY1ZWVlNzVkMDg0ZTI5NTJkNWExODMzMGY1ZTg1OTdiYmQ1NTYiLCJpYXQiOjE2OTgyMzM2MzIuMTA0MDg5LCJuYmYiOjE2OTgyMzM2MzIuMTA0MDkxLCJleHAiOjE3Mjk4NTYwMzIuMTAyNjE2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TrQfKuqCA_8awQX0fOLR6hyW7nQv_QG3uvUgpPJpbbkZ7UIf2EsN6p8k0mYOaCeEzNPlSCL0O9bTq9cehjIxyE-Be_tUw0BAXMk8_2BoEBWm8vq_abuwjrO2bej9hQcSFV4NtsRltuRVWzftX-hiz0pnGT3vfZVca3gC4NgeuFvz7LWu5XS3MRjK-k-L9J_WPO9_-sTtLHXgHci4UGvcFQi7pNTGTixpYmRoS07Eb9KGLpgYAJqLvOkhqmiRUuGiUocTI3a9KBIEMFJmSx2oQyWFbJ7ChliAEHjm1wcDYNYtqILQBA4qc3zeKQzqHYUl4mMKFfX6Mz4Jtr9bzxkyG0_Cpo42CWSLR52xx2a9lr8M0V505nCYJbUvTCNVWdw40wDB3-_GufyBQwX_yvnUrqcH3NBQckeRvTfpi-1p3YswV3030AfkUJBRkWqdlUsopqphZrEpUTEnbMnco4RiYguNQezJnQ3ijB0u2njZ-PNcSHxmhrlpZL_dikXad3U9inxbs4sb8394qVSjx3tuC_5v9tmkioPws5r43EXcUAbepexgZ9Ejm-Awx95y6sVvvvJcAQV2v3xN-AvmwfbEmVb1ZO8Lz0ajXEc2uuoan1njpgCJwyiQvtE1mpkgPBlSWZ3TYADPnUzXM1aiG33lYxUo0hHh37gYi0Y-TLNdq6c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/beats/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"beats",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBeats",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDdlY2RiZWE2OTIyNWRkNzMzZGVhYWViZjk3M2EzMzE4ZjI1NTNkZWE3ZDY1ZWVlNzVkMDg0ZTI5NTJkNWExODMzMGY1ZTg1OTdiYmQ1NTYiLCJpYXQiOjE2OTgyMzM2MzIuMTA0MDg5LCJuYmYiOjE2OTgyMzM2MzIuMTA0MDkxLCJleHAiOjE3Mjk4NTYwMzIuMTAyNjE2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TrQfKuqCA_8awQX0fOLR6hyW7nQv_QG3uvUgpPJpbbkZ7UIf2EsN6p8k0mYOaCeEzNPlSCL0O9bTq9cehjIxyE-Be_tUw0BAXMk8_2BoEBWm8vq_abuwjrO2bej9hQcSFV4NtsRltuRVWzftX-hiz0pnGT3vfZVca3gC4NgeuFvz7LWu5XS3MRjK-k-L9J_WPO9_-sTtLHXgHci4UGvcFQi7pNTGTixpYmRoS07Eb9KGLpgYAJqLvOkhqmiRUuGiUocTI3a9KBIEMFJmSx2oQyWFbJ7ChliAEHjm1wcDYNYtqILQBA4qc3zeKQzqHYUl4mMKFfX6Mz4Jtr9bzxkyG0_Cpo42CWSLR52xx2a9lr8M0V505nCYJbUvTCNVWdw40wDB3-_GufyBQwX_yvnUrqcH3NBQckeRvTfpi-1p3YswV3030AfkUJBRkWqdlUsopqphZrEpUTEnbMnco4RiYguNQezJnQ3ijB0u2njZ-PNcSHxmhrlpZL_dikXad3U9inxbs4sb8394qVSjx3tuC_5v9tmkioPws5r43EXcUAbepexgZ9Ejm-Awx95y6sVvvvJcAQV2v3xN-AvmwfbEmVb1ZO8Lz0ajXEc2uuoan1njpgCJwyiQvtE1mpkgPBlSWZ3TYADPnUzXM1aiG33lYxUo0hHh37gYi0Y-TLNdq6c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "beat_title",
+							"value": "Last Resort Beat",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "test beats",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "199",
+							"type": "text"
+						},
+						{
+							"key": "genre",
+							"value": "Pop",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/beats/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"beats",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBeats",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDdlY2RiZWE2OTIyNWRkNzMzZGVhYWViZjk3M2EzMzE4ZjI1NTNkZWE3ZDY1ZWVlNzVkMDg0ZTI5NTJkNWExODMzMGY1ZTg1OTdiYmQ1NTYiLCJpYXQiOjE2OTgyMzM2MzIuMTA0MDg5LCJuYmYiOjE2OTgyMzM2MzIuMTA0MDkxLCJleHAiOjE3Mjk4NTYwMzIuMTAyNjE2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TrQfKuqCA_8awQX0fOLR6hyW7nQv_QG3uvUgpPJpbbkZ7UIf2EsN6p8k0mYOaCeEzNPlSCL0O9bTq9cehjIxyE-Be_tUw0BAXMk8_2BoEBWm8vq_abuwjrO2bej9hQcSFV4NtsRltuRVWzftX-hiz0pnGT3vfZVca3gC4NgeuFvz7LWu5XS3MRjK-k-L9J_WPO9_-sTtLHXgHci4UGvcFQi7pNTGTixpYmRoS07Eb9KGLpgYAJqLvOkhqmiRUuGiUocTI3a9KBIEMFJmSx2oQyWFbJ7ChliAEHjm1wcDYNYtqILQBA4qc3zeKQzqHYUl4mMKFfX6Mz4Jtr9bzxkyG0_Cpo42CWSLR52xx2a9lr8M0V505nCYJbUvTCNVWdw40wDB3-_GufyBQwX_yvnUrqcH3NBQckeRvTfpi-1p3YswV3030AfkUJBRkWqdlUsopqphZrEpUTEnbMnco4RiYguNQezJnQ3ijB0u2njZ-PNcSHxmhrlpZL_dikXad3U9inxbs4sb8394qVSjx3tuC_5v9tmkioPws5r43EXcUAbepexgZ9Ejm-Awx95y6sVvvvJcAQV2v3xN-AvmwfbEmVb1ZO8Lz0ajXEc2uuoan1njpgCJwyiQvtE1mpkgPBlSWZ3TYADPnUzXM1aiG33lYxUo0hHh37gYi0Y-TLNdq6c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/beats/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"beats",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loginUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "kasedevs@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Password@101",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
